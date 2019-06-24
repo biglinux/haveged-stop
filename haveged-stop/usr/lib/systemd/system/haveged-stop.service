@@ -1,0 +1,12 @@
+[Unit]
+Description=Stop haveged after sddm start
+DefaultDependencies=no
+After=sddm.service
+Before=shutdown.target
+Conflicts=shutdown.target
+
+[Service]
+ExecStart=service haveged stop
+
+[Install]
+WantedBy=default.target
