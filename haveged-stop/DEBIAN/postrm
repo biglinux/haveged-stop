@@ -1,0 +1,12 @@
+#!/bin/sh
+set -e
+package_name=haveged-stop
+case "$1" in
+  remove)
+    dpkg-divert --package "$package_name" --rename --remove "/usr/lib/systemd/system/haveged.service"
+    ;;
+  purge)
+    dpkg-divert --package "$package_name" --rename --remove "/usr/lib/systemd/system/haveged.service"
+;;
+esac
+exit 0

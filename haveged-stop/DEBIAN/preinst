@@ -1,0 +1,16 @@
+#!/bin/sh
+set -e
+package_name=haveged-stop
+mkdir -p "/usr/share/dpkgdivert/haveged-stop"
+case "$1" in
+  install)
+    dpkg-divert --package "$package_name" --divert "/usr/share/dpkgdivert/haveged-stop/usrlibsystemdsystemhaveged.service" --rename "/usr/lib/systemd/system/haveged.service"
+    ;;
+  upgrade)
+if [ "$(dpkg-divert --list "/usr/lib/systemd/system/haveged.service")" = "" ]
+then
+    dpkg-divert --package "$package_name" --divert "/usr/share/dpkgdivert/haveged-stop/usrlibsystemdsystemhaveged.service" --rename "/usr/lib/systemd/system/haveged.service"
+fi
+;;
+esac
+exit 0

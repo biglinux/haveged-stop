@@ -1,5 +1,9 @@
-e07881188ab2914383a30065a9216fda  DEBIAN/control
+d41d8cd98f00b204e9800998ecf8427e  DEBIAN/md5sums
 8652a85fc8c583e1a14fed5365f7591f  DEBIAN/postinst
 316af5da97ab0b72b10cdf350e831179  DEBIAN/prerm
-d41d8cd98f00b204e9800998ecf8427e  DEBIAN/md5sums
+cce53580b84de03084052748505e01db  DEBIAN/dpkg-divert
+1487d274d07f9cc2ebab9fceace8d51f  DEBIAN/preinst
+17fb03d6c0a0fd9299396db7f9281876  DEBIAN/postrm
+7ea95a1b0c0ef3cbd82a88a6df90a3b2  DEBIAN/control
 77f751581812d4577b2b5007e2c9ba59  usr/lib/systemd/system/haveged-stop.service
+a3e6c741e7a9c26441eba65fdd85cdde  usr/lib/systemd/system/haveged.service
